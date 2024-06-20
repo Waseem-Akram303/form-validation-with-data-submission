@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form validation</title>
+  </head>
+  <body>
+    <form id="main-container" onsubmit="return validateForm(event)">
+      <h1>Registration</h1>
+      <div id="main-div">
+        <div id="input-data">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+          <p id="nameerror" class="error"></p>
+        </div>
+        <div id="input-data">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" />
+          <p id="usererror" class="error"></p>
+        </div>
+        <div id="input-data">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter your email" />
+          <p id="emailerror" class="error"></p>
+        </div>
+        <div id="input-data">
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" placeholder="Enter your phone number" />
+          <p id="numbererror" class="error"></p>
+        </div>
+        <div id="input-data">
+          <label for="password">Password</label>
+          <input type="text" id="password" placeholder="Enter your password" />
+          <p id="passerror" class="error"></p>
+        </div>
+        <div id="input-data">
+          <label for="confPass">Confirm password</label>
+          <input type="text" id="confPass" placeholder="Enter your password" />
+          <p id="conferror" class="error"></p>
+        </div>
+      </div>
+      <p>Gender</p>
+      <p id="radiobtn-P" class="error"></p>
+      <div id="radio-btn-div">
+        <div>
+          <input type="radio" name="drone" value="child" id="child" />
+          <label for="child">Child</label>
+        </div>
+        <div>
+          <input type="radio" name="drone" value="male" id="male" />
+          <label for="male">Male</label>
+        </div>
+
+        <div>
+          <input type="radio" name="drone" value="female" id="female" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <table border="1" id="dataTable">
+      <caption>
+        <h3>All Registered User</h3>
+      </caption>
+      <tr>
+        <!-- <th>s.r</th> -->
+        <th>Name</th>
+        <th>username</th>
+        <th>Email</th>
+        <th>Phone no.</th>
+        <th>Password</th>
+        <th>Gender</th>
+      </tr>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
